@@ -2,11 +2,22 @@
 <html lang="pt-BR">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>iCan</title>
-<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#0B2B2C;background:#F4FAF9;line-height:1.5}h1{color:#0F766E}a{color:#0F766E}</style></head>
+<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#0B2B2C;background:#F4FAF9;line-height:1.5}h1{color:#0F766E}a{color:#0F766E}.apoio{margin:28px 0;padding:16px;border:1px solid #D5E6E3;border-radius:16px;background:#fff}.apoio h2{margin:0 0 8px;font-size:20px;color:#0F766E}code{display:block;margin:12px 0;padding:10px;border-radius:10px;background:#E4F3F0;word-break:break-all;user-select:all}button{height:44px;padding:0 20px;border:0;border-radius:22px;background:#0F766E;color:#fff;font-size:16px;cursor:pointer}small{color:#3F5C5D}</style></head>
 <body>
 <h1>iCan</h1>
 <p>App pessoal de hábitos e produtividade para Android, feito por Daniel Angheben e usado por ele, pela família e por amigos.</p>
 <p>Os dados ficam no seu aparelho. Entrar com a conta Google é opcional e serve para o backup no seu próprio Google Drive e, em breve, para a sincronização entre aparelhos.</p>
+<div class="apoio">
+<h2>Apoie o iCan</h2>
+<p>O iCan é gratuito, sem anúncios e sem servidor. Se ele ajuda você e quiser contribuir, a doação é voluntária e feita por Pix. Ela não libera nenhum recurso extra.</p>
+<p><strong>Chave Pix (chave aleatória):</strong></p>
+<code id="chave">8ddce9da-e7a0-452c-8cfc-7ccb6493964b</code>
+<button type="button" id="copiar">Copiar chave</button>
+<p><small>A doação é feita só por aqui, não dentro do app. Confira o nome do recebedor no app do seu banco antes de confirmar.</small></p>
+</div>
+<script>
+document.getElementById('copiar').addEventListener('click',function(){var b=this,t=document.getElementById('chave').textContent;function ok(){b.textContent='Chave copiada';setTimeout(function(){b.textContent='Copiar chave'},2000)}if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(ok,function(){})}else{var r=document.createRange();r.selectNodeContents(document.getElementById('chave'));var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');ok()}catch(e){}}});
+</script>
 <p><a href="privacidade.html">Política de privacidade</a></p>
 <p>Contato: angheben.daniel@gmail.com</p>
 </body></html>
